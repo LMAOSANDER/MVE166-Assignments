@@ -13,6 +13,7 @@ print(m)
 
 optimize!(m)
 
+# sensitivity_report = lp_sensitivity_report(m)
 
 # Solution
 if termination_status(m) == JuMP.OPTIMAL
@@ -26,3 +27,5 @@ if termination_status(m) == JuMP.OPTIMAL
 else
     println("No optimal slution available")
 end
+
+# print(sensitivity_report[x[3]])
